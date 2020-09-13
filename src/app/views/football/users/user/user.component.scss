@@ -1,0 +1,24 @@
+.user__link-text {
+    margin-left: 16px;
+}
+
+.user-image {
+    background-position: center;
+    background-size: cover;
+    width: 75px;
+    height: 75px;
+}
+
+.mat-card-avatar {
+    border-radius: 0;
+}
+
+::ng-deep .mat-card-header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+::ng-deep mat-card-title {
+    margin-bottom: 0 !important;
+}

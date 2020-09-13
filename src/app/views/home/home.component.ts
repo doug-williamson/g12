@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  leagues = [
+    {
+      name: 'College Football',
+      route: '/football',
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

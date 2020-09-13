@@ -11,7 +11,6 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
 import { HomeModule } from './views/home/home.module';
 import { ContributorsModule } from './views/contributors/contributors.module';
-import { FootballModule } from './views/football/football.module';
 import { PodcastModule } from './views/podcast/podcast.module';
 import { StreamingModule } from './views/streaming/streaming.module';
 import { UpcomingEventsModule } from './views/upcoming-events/upcoming-events.module';
@@ -29,7 +28,6 @@ import { UpcomingEventsModule } from './views/upcoming-events/upcoming-events.mo
 
     HomeModule,
     ContributorsModule,
-    FootballModule,
     PodcastModule,
     StreamingModule,
     UpcomingEventsModule,
@@ -39,11 +37,11 @@ import { UpcomingEventsModule } from './views/upcoming-events/upcoming-events.mo
 
     RhombusShellModule.forRoot({
       applicationInfo: {
-        name: 'DougWilliamson.Website',
-        version: '1.0.0-beta.1',
-        logoUrl: undefined,
-        logoLetters: 'DW',
-        twitterUrl: 'https://twitter.com/DougWilliamson_',
+        name: 'G-12 Network',
+        version: '1.0.0-beta.0',
+        logoUrl: './assets/g12_network.png',
+        logoLetters: undefined,
+        twitterUrl: 'https://twitter.com/g12football',
       },
     }),
 
