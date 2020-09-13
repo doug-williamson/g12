@@ -1,0 +1,22 @@
+<div fxLayout="column" fxFill style="padding: 16px;">
+    <mat-card style="margin-bottom: 16px;">
+        <mat-card-header>
+          <img mat-card-avatar [src]="'./assets/g12_football.png'">
+          <mat-card-title>G12 Football</mat-card-title>
+          <mat-card-subtitle>NCAA 14 Online Dynasty League</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            Text for league information goes here...
+          </p>
+        </mat-card-content>
+    </mat-card>
+    <div class="streaming__iframe" fxLayoutAlign="center stretch" fxFlex>
+      <iframe fxFlex
+        src="https://player.twitch.tv/?channel=g12football&parent=localhost:4200&muted=true"
+        frameborder="0"
+        scrolling="no"
+        allowfullscreen="true">
+      </iframe>
+    </div>
+</div>

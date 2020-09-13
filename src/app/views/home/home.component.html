@@ -1,1 +1,21 @@
-<p>home works!</p>
+<div fxLayout="column" fxFill style="padding: 16px;">
+    <mat-card style="margin-bottom: 16px;">
+        <mat-card-header>
+          <img mat-card-avatar [src]="'./assets/g12_network.png'">
+          <mat-card-title>G12 Network</mat-card-title>
+          <mat-card-subtitle>Network of Online Dynasties</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            Text for network information goes here...
+          </p>
+        </mat-card-content>
+    </mat-card>
+    <mat-nav-list>
+        <div mat-subheader>Leagues</div>
+        <mat-list-item *ngFor="let league of leagues">
+            <div mat-line [routerLink]="league.route">{{ league.name }}</div>
+        </mat-list-item>
+        <!-- <mat-divider *ngIf="!last"></mat-divider> -->
+    </mat-nav-list>
+</div>

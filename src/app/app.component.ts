@@ -14,29 +14,18 @@ export class AppComponent implements OnInit {
 
   navItems: RhombusShellNavEntry[] = [
     {
-      name: 'Home',
-      route: 'home',
-    },
-    {
       name: 'Football',
-      route: 'football',
+      children: [
+        {
+          name: 'About',
+          route: '/football/about',
+        },
+        {
+          name: 'Users',
+          route: '/football/users',
+        }
+      ],
     },
-    {
-      name: 'Podcast',
-      route: 'podcast',
-    },
-    {
-      name: 'Contributors',
-      route: 'contributors',
-    },
-    {
-      name: 'Streaming',
-      route: 'streaming',
-    },
-    {
-      name: 'Upcoming Events',
-      route: 'upcoming-events',
-    }
   ];
 
   constructor(
