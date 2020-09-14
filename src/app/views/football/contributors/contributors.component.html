@@ -1,7 +1,7 @@
 <ng-container *ngIf="media.isActive('lt-sm')">
-    <mat-nav-list fxFlex>
+    <mat-list fxFlex>
         <ng-container *ngFor="let user of users">
-            <a mat-list-item [routerLink]="user.route">
+            <mat-list-item [routerLink]="user.route">
                 <img mat-list-icon *ngIf="user.avatar" [src]="user.avatar">
                 <mat-icon mat-list-icon *ngIf="!user.avatar">account_circle</mat-icon>
                 <div mat-line>
@@ -10,23 +10,28 @@
                 <div mat-line>
                     {{ user.role }} 
                 </div>
-            </a>
+            </mat-list-item>
             <mat-divider *ngIf="!last"></mat-divider>
         </ng-container>
-    </mat-nav-list>
+    </mat-list>
 </ng-container>
 <ng-container *ngIf="media.isActive('gt-xs')">
     <div fxLayout="column" fxLayoutAlign="start stretch" fxFlex style="margin: 8px;">
         <div fxLayout="row wrap" fxFlex>
             <ng-container *ngFor="let user of users">
                 <div fxFlex="50">
-                    <mat-card style="margin: 8px; padding: 16px;" [routerLink]="user.route">
-                        <mat-card-header style="min-height: 50px;">
+                    <mat-card style="margin: 8px; padding: 16px;">
+                        <mat-card-header style="min-height: 100px;">
                             <img mat-card-avatar class="user-image" *ngIf="user.avatar" [src]="user.avatar">
                             <mat-icon mat-card-avatar *ngIf="!user.avatar">account_circle</mat-icon>
                             <mat-card-title>{{ user.name }}</mat-card-title>
                             <mat-card-subtitle>{{ user.role }}</mat-card-subtitle>
                         </mat-card-header>
+                        <mat-card-actions>
+                            <button mat-flat-button color="primary">Twitch</button>
+                            <button mat-flat-button color="accent">Twitter</button>
+                            <button mat-flat-button>Etc...</button>
+                        </mat-card-actions>
                     </mat-card>
                 </div>
             </ng-container>

@@ -23,7 +23,11 @@ export class AppComponent implements OnInit {
         {
           name: 'Users',
           route: '/football/users',
-        }
+        },
+        {
+          name: 'Contributors',
+          route: '/football/contributors',
+        },
       ],
     },
   ];

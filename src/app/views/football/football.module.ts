@@ -13,9 +13,10 @@ import { UsersComponent } from './users/users.component';
 import { RouterModule } from '@angular/router';
 import { UserComponent } from './users/user/user.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { ContributorsComponent } from './contributors/contributors.component';
 
 @NgModule({
-  declarations: [AboutComponent, UsersComponent, UserComponent],
+  declarations: [AboutComponent, UsersComponent, UserComponent, ContributorsComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
