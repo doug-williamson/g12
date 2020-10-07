@@ -1,38 +1,33 @@
-<div fxLayout="column" fxFill>
-    <mat-toolbar>
-        <button mat-icon-button [routerLink]="'/football/users'">
-            <mat-icon>keyboard_backspace</mat-icon>
-        </button>
-        Back to Users
-    </mat-toolbar>
-    <mat-card style="margin: 16px; padding: 16px;">
-        <mat-card-header>
-            <img mat-card-avatar class="user-image" [src]="'./assets/rhombus_tv.png'">
-            <mat-card-title>Rhombus</mat-card-title>
-        </mat-card-header>
-        <mat-card-actions>
-            <div fxLayout fxLayoutAlign="space-around center" style="margin-top: 16px;">
-                <button mat-icon-button color="primary" (click)="goToLink('https://twitch.tv/rhombus_tv')">
-                    <img style="max-height: 32px; max-width: 32px;" [src]="'./assets/twitch.png'">
-                </button>
-                <button mat-icon-button color="primary" (click)="goToLink('https://twitter.com/rhombus_tv')">
-                    <img style="max-height: 32px; max-width: 32px;" [src]="'./assets/twitter.png'">
-                </button>
-                <button mat-icon-button color="primary" (click)="goToLink('https://www.youtube.com/channel/UCCAXqgotIjU80a7G6b87BLA')">
-                    <img style="max-height: 32px; max-width: 32px;" [src]="'./assets/youtube.png'">
-                </button>
-                <button mat-icon-button color="primary" (click)="goToLink('https://discord.gg/7ecptRj')">
-                    <img style="max-height: 32px; max-width: 32px;" [src]="'./assets/discord.png'">
-                </button>
-            </div>
-        </mat-card-actions>
-    </mat-card>
-    <div style="margin: 16px;" fxLayoutAlign="center stretch" fxFlex>
-        <iframe fxFlex
-          src="https://player.twitch.tv/?channel=g12football&parent=localhost:4200&muted=true"
-          frameborder="0"
-          scrolling="no"
-          allowfullscreen="true">
-        </iframe>
-      </div>
-</div>
+<mat-card style="margin: 16px; padding: 16px;" fxFlex>
+    <mat-card-header>
+        <img mat-card-avatar class="user-image" [src]="'./assets/rhombus_tv.png'">
+        <mat-card-title>Rhombus</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <!-- <div>
+            Sideline reporter qilde or q as they also call her, has some odd observations which she provides during the football games. She is from Finland as You can probably hear from her accent. Her sauna is always open for visitors, but no one has actually hop in a plane to be there yet. Twitch has been her home since September 2019. Streamer, mod and beeing called bot because it seems she never sleep. Does her streams the way she wants. Come join and take a look!
+        </div> -->
+    </mat-card-content>
+    <mat-card-actions>
+        <!-- <div fxLayout fxLayoutAlign="space-around center" style="margin-top: 16px;">
+            <button mat-icon-button color="primary" (click)="goToLink('https://twitch.tv/rhombus_tv')">
+                <img style="max-height: 32px; max-width: 32px;" [src]="'./assets/twitch.png'">
+            </button>
+            <button mat-icon-button color="primary" (click)="goToLink('https://twitter.com/rhombus_tv')">
+                <img style="max-height: 32px; max-width: 32px;" [src]="'./assets/twitter.png'">
+            </button>
+            <button mat-icon-button color="primary" (click)="goToLink('https://www.youtube.com/channel/UCCAXqgotIjU80a7G6b87BLA')">
+                <img style="max-height: 32px; max-width: 32px;" [src]="'./assets/youtube.png'">
+            </button>
+            <button mat-icon-button color="primary" (click)="goToLink('https://discord.gg/7ecptRj')">
+                <img style="max-height: 32px; max-width: 32px;" [src]="'./assets/discord.png'">
+            </button>
+        </div> -->
+        <div fxLayout="column" fxLayoutAlign="center stretch">
+            <button mat-flat-button>Twitch</button>
+            <button mat-flat-button>Twitter</button>
+            <button mat-flat-button>YouTube</button>
+            <button mat-flat-button>Discord</button>
+        </div>
+    </mat-card-actions>
+</mat-card>

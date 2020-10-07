@@ -9,7 +9,7 @@ export class HomeComponent implements OnInit {
 
   leagues = [
     {
-      name: 'College Football',
+      name: 'G12 Football',
       route: '/football',
     }
   ];

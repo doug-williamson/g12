@@ -10,7 +10,6 @@ import { RhombusShellModule } from '@dougwilliamson/rhombus-shell';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
 import { HomeModule } from './views/home/home.module';
-import { ContributorsModule } from './views/contributors/contributors.module';
 import { PodcastModule } from './views/podcast/podcast.module';
 import { StreamingModule } from './views/streaming/streaming.module';
 import { UpcomingEventsModule } from './views/upcoming-events/upcoming-events.module';
@@ -27,7 +26,6 @@ import { UpcomingEventsModule } from './views/upcoming-events/upcoming-events.mo
     FlexLayoutModule,
 
     HomeModule,
-    ContributorsModule,
     PodcastModule,
     StreamingModule,
     UpcomingEventsModule,

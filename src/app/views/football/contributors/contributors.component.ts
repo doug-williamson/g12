@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaObserver } from '@angular/flex-layout';
+import { Contributor } from './contributor';
+import { ContributorsService } from './contributors.service';
 
 @Component({
   selector: 'app-contributors',
@@ -8,37 +10,19 @@ import { MediaObserver } from '@angular/flex-layout';
 })
 export class ContributorsComponent implements OnInit {
 
-  users = [
-    {
-      name: 'Fantasy World League',
-      role: 'Creator, Producer, Play-By-Play, Color Commentary',
-      route: '/football/contributors/1'
-    },
-    {
-      name: 'Macdub44',
-      role: 'Producer, Play-By-Play, Color Commentary',
-      route: '/football/contributors/2'
-    },
-    {
-      name: 'DeezDiabeteez',
-      role: 'Play-By-Play, Color Commentary',
-      route: '/football/contributors/3'
-    },
-    {
-      name: 'Chuckleberry',
-      role: 'Color Commentary',
-      route: '/football/contributors/4'
-    },
-    {
-      name: 'Sharpshooter',
-      role: 'Play-By-Play, Color Commentary',
-      route: '/football/contributors/5'
-    },
-  ];
+  displayedColumns: string[] = ['name', 'roles'];
+  // dataSource = ELEMENT_DATA;
+  contributors: Contributor[];
 
-  constructor(public media: MediaObserver) { }
+  constructor(public media: MediaObserver, private contributorsService: ContributorsService) { }
 
   ngOnInit(): void {
+    this.contributorsService.getContributors().subscribe(data => {
+      this.contributors = data.map(e => {
+        return { id: e.payload.doc.id,
+          ...e.payload.doc.data() as Contributor }
+      });
+    })
   }
 
 }

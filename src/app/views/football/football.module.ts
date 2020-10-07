@@ -15,6 +15,9 @@ import { UserComponent } from './users/user/user.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ContributorsComponent } from './contributors/contributors.component';
 
+import {MatTableModule} from '@angular/material/table';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
 @NgModule({
   declarations: [AboutComponent, UsersComponent, UserComponent, ContributorsComponent],
   imports: [
@@ -27,8 +30,10 @@ import { ContributorsComponent } from './contributors/contributors.component';
     MatListModule,
     MatCardModule,
     MatButtonModule,
+    MatTableModule,
     MatTabsModule,
     MatToolbarModule,
+    MatSidenavModule,
 
     RouterModule,
 
