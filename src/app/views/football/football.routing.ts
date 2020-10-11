@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
-import { UsersComponent } from './users/users.component';
-import { UserComponent } from './users/user/user.component';
 import { ContributorsComponent } from './contributors/contributors.component';
+import { TeamsComponent } from './teams/teams.component';
 
 const routes: Routes = [
     {
@@ -19,17 +18,10 @@ const routes: Routes = [
         }
     },
     {
-        path: 'users',
-        component: UsersComponent,
+        path: 'teams',
+        component: TeamsComponent,
         data: {
-            breadcrumb: 'Football Users'
-        }
-    },
-    {
-        path: 'users/:id',
-        component: UserComponent,
-        data: {
-            breadcrumb: 'Football User'
+            breadcrumb: 'Football Teams'
         }
     },
     {
@@ -39,14 +31,6 @@ const routes: Routes = [
             breadcrumb: 'Football Contributors'
         }
     },
-    {
-        path: 'contributors/:id',
-        component: ContributorsComponent,
-        data: {
-            breadcrumb: 'Football Contributor'
-        }
-    },
-
 ];
 
 @NgModule({

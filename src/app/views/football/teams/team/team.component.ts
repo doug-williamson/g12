@@ -1,15 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IFootballUser } from './user';
+import { Team } from './team';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss']
+  selector: 'app-team',
+  templateUrl: './team.component.html',
+  styleUrls: ['./team.component.scss']
 })
-export class UserComponent implements OnInit {
+export class TeamComponent implements OnInit {
 
   @Input()
-  user: IFootballUser;
+  team: Team;
 
   step = 0;
 
@@ -25,4 +25,5 @@ export class UserComponent implements OnInit {
   goToLink(url: string) {
     window.open(url, '_blank');
   }
+
 }

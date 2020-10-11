@@ -9,17 +9,17 @@ import { MatTabsModule } from '@angular/material/tabs'
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FootballRoutingModule } from './football.routing';
 import { AboutComponent } from './about/about.component';
-import { UsersComponent } from './users/users.component';
 import { RouterModule } from '@angular/router';
-import { UserComponent } from './users/user/user.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ContributorsComponent } from './contributors/contributors.component';
 
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { TeamsComponent } from './teams/teams.component';
+import { TeamComponent } from './teams/team/team.component';
 
 @NgModule({
-  declarations: [AboutComponent, UsersComponent, UserComponent, ContributorsComponent],
+  declarations: [AboutComponent, ContributorsComponent, TeamsComponent, TeamComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
