@@ -17,12 +17,12 @@ export class ContributorsComponent implements OnInit {
   constructor(public media: MediaObserver, private contributorsService: ContributorsService) { }
 
   ngOnInit(): void {
-    this.contributorsService.getContributors().subscribe(data => {
-      this.contributors = data.map(e => {
-        return { id: e.payload.doc.id,
-          ...e.payload.doc.data() as Contributor }
-      });
-    })
+    // this.contributorsService.getContributors().subscribe(data => {
+    //   this.contributors = data.map(e => {
+    //     return { id: e.payload.doc.id,
+    //       ...e.payload.doc.data() as Contributor }
+    //   });
+    // }),
   }
 
 }

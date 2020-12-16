@@ -1,63 +1,23 @@
 <div fxLayout="column" fxFlex>
-    <mat-drawer-container>
-        <mat-drawer-content>
-            <div fxLayout="column" fxFlex>
-                <ng-container *ngIf="media.isActive('lt-sm')">
-                    <mat-list fxFlex>
-                        <div mat-subheader>Season 1, Week 11</div>
-                        <ng-container *ngFor="let team of teams">
-                            <mat-list-item (click)="userDrawer.toggle()">
-                                <!-- <img mat-list-icon *ngIf="streamer.avatar" [src]="streamer.avatar"> -->
-                                <mat-icon mat-list-icon>account_circle</mat-icon>
-                                <div mat-line>
-                                    <ng-container *ngIf="team.rank">
-                                        # {{ team.rank }}
-                                    </ng-container>
-                                    {{ team.name }}
-                                </div>
-                                <div mat-line>
-                                    {{ team.wins }} - {{ team.losses }}
-                                </div>
-                            </mat-list-item>
-                            <mat-divider *ngIf="!last"></mat-divider>
-                        </ng-container>
-                    </mat-list>
-                </ng-container>
-                <ng-container *ngIf="media.isActive('gt-xs')">
-                    <table mat-table [dataSource]="teams" fxFlex>
-            
-                        <!-- Rank Column -->
-                        <ng-container matColumnDef="rank">
-                            <th mat-header-cell *matHeaderCellDef> Rank </th>
-                            <td mat-cell *matCellDef="let element"> {{ element.rank }} </td>
-                        </ng-container>
-                
-                        <!-- Team Column -->
-                        <ng-container matColumnDef="name">
-                            <th mat-header-cell *matHeaderCellDef> Team </th>
-                            <td mat-cell *matCellDef="let element"> {{ element.name }} </td>
-                        </ng-container>
-            
-                        <!-- Record Column -->
-                        <ng-container matColumnDef="wins">
-                            <th mat-header-cell *matHeaderCellDef> Record </th>
-                            <td mat-cell *matCellDef="let element"> {{ element.wins }} </td>
-                        </ng-container>
-                
-                        <!-- Name Column -->
-                        <ng-container matColumnDef="losses">
-                            <th mat-header-cell *matHeaderCellDef> Name </th>
-                            <td mat-cell *matCellDef="let element"> {{ element.losses }} </td>
-                        </ng-container>
-                      
-                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="userDrawer.toggle()"></tr>
-                    </table>
-                </ng-container>
-            </div>
-        </mat-drawer-content>
-        <mat-drawer #userDrawer [mode]="'over'" position="end">
-            <app-team></app-team>
-        </mat-drawer>
-    </mat-drawer-container>
+    <ng-container *ngIf="(compact$ | async); else desktopView">
+		<mat-tab-group mat-stretch-tabs *ngIf="(teams$| async) as teams">
+			<mat-tab label="B1G">
+				<mat-list>
+					<ng-container *ngFor="let team of teams">
+						<mat-list-item>{{ team.team }}</mat-list-item>
+					</ng-container>
+				</mat-list>
+			</mat-tab>
+			<mat-tab label="SEC">
+				<mat-list>
+					<ng-container *ngFor="let team of teams">
+						<mat-list-item>{{ team.team }}</mat-list-item>
+					</ng-container>
+				</mat-list>
+			</mat-tab>
+		</mat-tab-group>
+	</ng-container>
+	<ng-template #desktopView>
+
+	</ng-template>
 </div>

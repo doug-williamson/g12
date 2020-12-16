@@ -17,6 +17,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { TeamsComponent } from './teams/teams.component';
 import { TeamComponent } from './teams/team/team.component';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [AboutComponent, ContributorsComponent, TeamsComponent, TeamComponent],
@@ -25,6 +26,7 @@ import { TeamComponent } from './teams/team/team.component';
     FlexLayoutModule,
 
     MatButtonModule,
+    MatDividerModule,
     MatExpansionModule,
     MatIconModule,
     MatListModule,

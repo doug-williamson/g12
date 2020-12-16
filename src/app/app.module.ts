@@ -13,6 +13,7 @@ import { HomeModule } from './views/home/home.module';
 import { PodcastModule } from './views/podcast/podcast.module';
 import { StreamingModule } from './views/streaming/streaming.module';
 import { UpcomingEventsModule } from './views/upcoming-events/upcoming-events.module';
+import { RhombusComponentsModule } from '@dougwilliamson/rhombus';
 
 @NgModule({
   declarations: [
@@ -33,10 +34,12 @@ import { UpcomingEventsModule } from './views/upcoming-events/upcoming-events.mo
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
 
+    RhombusComponentsModule,
+
     RhombusShellModule.forRoot({
       applicationInfo: {
         name: 'G-12 Network',
-        version: '1.0.0-beta.0',
+        version: '1.0.0-beta.1',
         logoUrl: './assets/g12_network.png',
         logoLetters: undefined,
         twitterUrl: 'https://twitter.com/g12football',
