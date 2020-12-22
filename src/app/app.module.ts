@@ -17,36 +17,36 @@ import { RhombusComponentsModule } from '@dougwilliamson/rhombus';
 
 @NgModule({
   declarations: [
-    AppComponent,
+	AppComponent,
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    // CoreModule,
-    FlexLayoutModule,
+	BrowserModule,
+	BrowserAnimationsModule,
+	HttpClientModule,
+	// CoreModule,
+	FlexLayoutModule,
 
-    HomeModule,
-    PodcastModule,
-    StreamingModule,
-    UpcomingEventsModule,
+	HomeModule,
+	PodcastModule,
+	StreamingModule,
+	UpcomingEventsModule,
 
-    AngularFireAuthModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
+	AngularFireAuthModule,
+	AngularFireModule.initializeApp(environment.firebaseConfig),
 
-    RhombusComponentsModule,
+	RhombusComponentsModule,
 
-    RhombusShellModule.forRoot({
-      applicationInfo: {
-        name: 'G-12 Network',
-        version: '1.0.0-beta.1',
-        logoUrl: './assets/g12_network.png',
-        logoLetters: undefined,
-        twitterUrl: 'https://twitter.com/g12football',
-      },
-    }),
+	RhombusShellModule.forRoot({
+		applicationInfo: {
+			name: 'G-12 Network',
+			version: '1.0.0-beta.1',
+			logoUrl: './assets/g12_network.png',
+			logoLetters: undefined,
+			twitterUrl: 'https://twitter.com/g12network',
+		},
+	}),
 
-    AppRouting,
+	AppRouting,
   ],
   bootstrap: [AppComponent],
 })
