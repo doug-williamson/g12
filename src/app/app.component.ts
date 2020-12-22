@@ -9,27 +9,35 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent implements OnInit {
 
-  _darkMode$: Observable<boolean>;
-  title = 'G-12';
+    _darkMode$: Observable<boolean>;
+    title = 'G-12';
 
-  navItems: RhombusShellNavEntry[] = [
-    {
-      name: 'Football',
-      children: [
+    navItems: RhombusShellNavEntry[] = [
         {
-          name: 'About',
-          route: '/football/about',
+            name: 'Football',
+            children: [
+                {
+                    name: 'About',
+                    route: '/football/about',
+                },
+                {
+                    name: 'Stream',
+                    route: '/football/stream',
+                },
+                {
+                    name: 'Teams',
+                    route: '/football/teams',
+				},
+				{
+					name: 'Blog',
+					route: '/football/blog',
+				},
+                {
+                    name: 'Staff',
+                    route: '/football/staff',
+                },
+            ],
         },
-        {
-          name: 'Teams',
-          route: '/football/teams',
-        },
-        {
-          name: 'Contributors',
-          route: '/football/contributors',
-        },
-      ],
-    },
   ];
 
   constructor(

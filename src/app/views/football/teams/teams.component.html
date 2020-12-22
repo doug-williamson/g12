@@ -4,20 +4,46 @@
 			<mat-tab label="B1G">
 				<mat-list>
 					<ng-container *ngFor="let team of teams">
-						<mat-list-item>{{ team.team }}</mat-list-item>
+                        <ng-container *ngIf="team.division === 1">
+                            <mat-list-item>{{ team.team }}</mat-list-item>
+                        </ng-container>
+						
 					</ng-container>
 				</mat-list>
 			</mat-tab>
 			<mat-tab label="SEC">
 				<mat-list>
 					<ng-container *ngFor="let team of teams">
-						<mat-list-item>{{ team.team }}</mat-list-item>
+						<ng-container *ngIf="team.division === 2">
+                            <mat-list-item>{{ team.team }}</mat-list-item>
+                        </ng-container>
 					</ng-container>
 				</mat-list>
 			</mat-tab>
 		</mat-tab-group>
 	</ng-container>
 	<ng-template #desktopView>
-
+        <div fxLayout fxLayoutAlign="start stretch" fxFlex *ngIf="(teams$| async) as teams" style="margin: 16px;">
+            <div fxFlex style="margin-right: 8px">
+                <mat-toolbar>B1G</mat-toolbar>
+                <mat-list>
+					<ng-container *ngFor="let team of teams">
+						<ng-container *ngIf="team.division === 1">
+                            <mat-list-item>{{ team.team }}</mat-list-item>
+                        </ng-container>
+					</ng-container>
+				</mat-list>
+            </div>
+            <div fxFlex style="margin-left: 8px">
+                <mat-toolbar>SEC</mat-toolbar>
+                <mat-list>
+					<ng-container *ngFor="let team of teams">
+						<ng-container *ngIf="team.division === 2">
+                            <mat-list-item>{{ team.team }}</mat-list-item>
+                        </ng-container>
+					</ng-container>
+				</mat-list>
+            </div>
+        </div>
 	</ng-template>
 </div>

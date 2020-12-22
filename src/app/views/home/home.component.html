@@ -1,26 +1,26 @@
 <div fxLayout="column" fxLayoutAlign="start stretch" fxFill>
-  <mat-card>
-      <mat-card-header>
-          <mat-card-title>Welcome to G-12!</mat-card-title>
-          <mat-card-subtitle>This is the online home for all your G-12 content! Follow along with our upcoming dynasty, as well as other fun things we have in store for 2021!!!</mat-card-subtitle>
-      </mat-card-header>
-  </mat-card>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Welcome to G-12!</mat-card-title>
+            <mat-card-subtitle>This is the online home for all your G-12 content! Follow along with our upcoming dynasty, as well as other fun things we have in store for 2021!!!</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
 
-  <ng-container *ngIf="(compact$ | async); else desktopView">
-      <mat-tab-group mat-stretch-tabs>
-          <mat-tab label="Latest News">
-              <rh-latest-news [latestNews]="latestNews" fxFlex="65"></rh-latest-news>
-          </mat-tab>
-          <mat-tab label="Coming Soon">
-              <rh-backlog [backlog]="backlog" fxFlex></rh-backlog>
-          </mat-tab>
-      </mat-tab-group>
-  </ng-container>
-  <ng-template #desktopView>
-      <div fxLayout fxLayoutAlign="start stretch" fxFlex>
-          <rh-latest-news [latestNews]="latestNews" fxFlex="65"></rh-latest-news>
-          <rh-backlog [backlog]="backlog" fxFlex></rh-backlog>
-      </div>
-  </ng-template>
+    <ng-container *ngIf="(compact$ | async); else desktopView">
+        <mat-tab-group mat-stretch-tabs>
+            <mat-tab label="Latest News">
+                <rh-latest-news [latestNews]="latestNews" fxFlex="65"></rh-latest-news>
+            </mat-tab>
+            <mat-tab label="Backlog">
+                <rh-backlog [backlog]="backlog" fxFlex></rh-backlog>
+            </mat-tab>
+        </mat-tab-group>
+    </ng-container>
+    <ng-template #desktopView>
+        <div fxLayout fxLayoutAlign="start stretch" fxFlex>
+            <rh-latest-news [latestNews]="latestNews" fxFlex="65"></rh-latest-news>
+            <rh-backlog [backlog]="backlog" fxFlex></rh-backlog>
+        </div>
+    </ng-template>
 
 </div>

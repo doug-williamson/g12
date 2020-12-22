@@ -25,7 +25,9 @@
     "@angular/router": "^10.2.1",
     "@dougwilliamson/rhombus": "^1.0.0-beta.6",
     "@dougwilliamson/rhombus-shell": "^1.0.0-beta.36",
+    "angularfire2": "^5.4.2",
     "firebase": "^8.0.1",
+    "promise-polyfill": "^8.2.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

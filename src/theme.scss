@@ -6,10 +6,111 @@
 // Typography
 @include rhombus-typography();
 
+/* For use in src/lib/core/theming/_palette.scss */
+$_G12-primary: (
+    50 : #e0eee2,
+    100 : #b3d5b6,
+    200 : #80b985,
+    300 : #4d9c54,
+    400 : #268730,
+    500 : #00720b,
+    600 : #006a0a,
+    700 : #005f08,
+    800 : #005506,
+    900 : #004203,
+    A100 : #77ff77,
+    A200 : #44ff44,
+    A400 : #11ff11,
+    A700 : #00f600,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$_G12-accent: (
+    50 : #fdfaf4,
+    100 : #f9f3e5,
+    200 : #f6ecd3,
+    300 : #f2e4c1,
+    400 : #efdeb4,
+    500 : #ecd8a7,
+    600 : #ead49f,
+    700 : #e7ce96,
+    800 : #e4c88c,
+    900 : #dfbf7c,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #fffefc,
+    A700 : #fff6e3,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$_G12-warning: (
+    50 : #f5e2e2,
+    100 : #e5b6b6,
+    200 : #d48685,
+    300 : #c25654,
+    400 : #b53130,
+    500 : #a80d0b,
+    600 : #a00b0a,
+    700 : #970908,
+    800 : #8d0706,
+    900 : #7d0303,
+    A100 : #ffaaaa,
+    A200 : #ff7777,
+    A400 : #ff4444,
+    A700 : #ff2a2a,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
 // Default colors
-$my-app-primary: mat-palette($mat-blue, 700, 100, 800);
-$my-app-accent:  mat-palette($mat-green, 700, 100, 800);
-$my-app-warn: mat-palette($mat-red, 700, 100, 800);
+$my-app-primary: mat-palette($_G12-primary, 700, 100, 800);
+$my-app-accent:  mat-palette($_G12-accent, 700, 100, 800);
+$my-app-warn: mat-palette($_G12-warning, 700, 100, 800);
 
 $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
 @include rhombus-shell-theme($my-app-theme);
