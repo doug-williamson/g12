@@ -13,37 +13,40 @@ import { HomeModule } from './views/home/home.module';
 import { PodcastModule } from './views/podcast/podcast.module';
 import { StreamingModule } from './views/streaming/streaming.module';
 import { UpcomingEventsModule } from './views/upcoming-events/upcoming-events.module';
+import { RhombusComponentsModule } from '@dougwilliamson/rhombus';
 
 @NgModule({
   declarations: [
-    AppComponent,
+	AppComponent,
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    // CoreModule,
-    FlexLayoutModule,
+	BrowserModule,
+	BrowserAnimationsModule,
+	HttpClientModule,
+	// CoreModule,
+	FlexLayoutModule,
 
-    HomeModule,
-    PodcastModule,
-    StreamingModule,
-    UpcomingEventsModule,
+	HomeModule,
+	PodcastModule,
+	StreamingModule,
+	UpcomingEventsModule,
 
-    AngularFireAuthModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
+	AngularFireAuthModule,
+	AngularFireModule.initializeApp(environment.firebaseConfig),
 
-    RhombusShellModule.forRoot({
-      applicationInfo: {
-        name: 'G-12 Network',
-        version: '1.0.0-beta.0',
-        logoUrl: './assets/g12_network.png',
-        logoLetters: undefined,
-        twitterUrl: 'https://twitter.com/g12football',
-      },
-    }),
+	RhombusComponentsModule,
 
-    AppRouting,
+	RhombusShellModule.forRoot({
+		applicationInfo: {
+			name: 'G-12 Network',
+			version: '1.0.0-beta.1',
+			logoUrl: './assets/g12_network.png',
+			logoLetters: undefined,
+			twitterUrl: 'https://twitter.com/g12network',
+		},
+	}),
+
+	AppRouting,
   ],
   bootstrap: [AppComponent],
 })

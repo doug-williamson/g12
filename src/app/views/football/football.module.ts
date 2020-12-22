@@ -11,20 +11,22 @@ import { FootballRoutingModule } from './football.routing';
 import { AboutComponent } from './about/about.component';
 import { RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { ContributorsComponent } from './contributors/contributors.component';
-
 import { MatTableModule } from '@angular/material/table';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { TeamsComponent } from './teams/teams.component';
 import { TeamComponent } from './teams/team/team.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { StreamComponent } from './stream/stream.component';
+import { StaffComponent } from './staff/staff.component';
 
 @NgModule({
-  declarations: [AboutComponent, ContributorsComponent, TeamsComponent, TeamComponent],
+  declarations: [AboutComponent, TeamsComponent, TeamComponent, StreamComponent, StaffComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
 
     MatButtonModule,
+    MatDividerModule,
     MatExpansionModule,
     MatIconModule,
     MatListModule,
