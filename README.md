@@ -1,35 +1,27 @@
-# Change Log
+# G12
 
-All notable changes to Rhombus software will be documented in this location. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.7.
 
-# URL
+## Development server
 
-https://g12-network.firebaseapp.com
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-<a name="1.0.0-beta.1"></a>
-# 1.0.0-beta.1 (2019-12-22)
+## Code scaffolding
 
-### Features
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-* App: generated custom palette for primary, secondary and warning colors
-* Football: added Blog routes/views
-* Football: swapped out Users/Contributors views for Teams/Staff views
-* Football: removed Stream component from About view to new view
+## Build
 
-<a name="1.0.0-beta.0"></a>
-# 1.0.0-beta.0 (2019-09-23)
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-### Features
+## Running unit tests
 
-* Consumed the following npm library:
-  - **@dougwilliamson/rhombus-shell**
-    - Created application shell to handle the following:
-        - Header
-        - Navigation
-        - About Dialog
-* Created the following application routes/views:
-    - Home
-    - Football
-        - About
-        - Users
-        - Contributors
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
